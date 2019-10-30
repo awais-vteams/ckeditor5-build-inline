@@ -28,6 +28,8 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
+import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 
 export default class InlineEditor extends InlineEditorBase {}
 
@@ -36,6 +38,7 @@ InlineEditor.builtinPlugins = [
 	Essentials,
 	UploadAdapter,
 	Autoformat,
+	Alignment,
 	Bold,
 	Italic,
 	BlockQuote,
@@ -54,7 +57,8 @@ InlineEditor.builtinPlugins = [
 	Paragraph,
 	PasteFromOffice,
 	Table,
-	TableToolbar
+	TableToolbar,
+	SimpleUploadAdapter
 ];
 
 // Editor configuration.
@@ -65,6 +69,7 @@ InlineEditor.defaultConfig = {
 			'|',
 			'bold',
 			'italic',
+			'alignment',
 			'link',
 			'bulletedList',
 			'numberedList',
